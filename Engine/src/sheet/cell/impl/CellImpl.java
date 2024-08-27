@@ -87,7 +87,8 @@ public class CellImpl implements Cell, Serializable {
     public void addInfluenceFrom(Cell AffectedFrom) { influenceFrom.add(AffectedFrom); }
 
     @Override
-    public void setOriginalValue(String originalValue) {
+    public void setOriginalValue(String originalValue)
+    {
        expression = OrignalValueUtilis.toExpression(originalValue);
        this.originalValue = originalValue;
     }

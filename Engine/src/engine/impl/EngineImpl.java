@@ -5,6 +5,7 @@ import engine.jaxb.parser.STLSheetToSheet;
 import engine.version.manager.api.VersionManager;
 import engine.version.manager.api.VersionManagerGetters;
 import engine.version.manager.impl.VersionManagerImpl;
+import exception.InvalidFunctionArgument;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
@@ -77,6 +78,7 @@ public class EngineImpl implements Engine {
 
     @Override
     public void updateCellStatus(String cellName, String value) {
+
         this.sheet.setCell(CoordinateFactory.toCoordinate(cellName.toUpperCase()), value);
         versionManager.addVersion(this.sheet);
     }

@@ -32,7 +32,7 @@ public class Concat extends BinaryExpression {
 
         if (!value) {
             //need to throw our own exception.
-            throw new IllegalArgumentException("arguments must be string !\n");
+            throw new IllegalArgumentException("arguments must be string or reference to other cell !\n");
         }
 
         return true;
